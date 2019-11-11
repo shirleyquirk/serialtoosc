@@ -17,6 +17,7 @@ messages=[]
 drv = Driver()
 while True:
   sleep(1)
+  #TODO: handle drv errors on improper packet
   messages += drv.receive(ser.read(ser.inWaiting()))
   for mess in messages:
     sock.sendto(mess,(UDP_HOST,UDP_PORT))
