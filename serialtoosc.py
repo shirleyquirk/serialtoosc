@@ -1,8 +1,10 @@
-#v 1.0
+#v 0.1
 #dumb router
-#listens for serial in
-#starts udp server
+#echos serial from serial port to a udp socket
 #
+#TODO: OSC client as well
+#TODO: OSCQuery everything
+
 from SlipLib.sliplib import Driver
 import serial,socket
 from time import sleep
