@@ -25,6 +25,7 @@ class MessageHandler(socketserver.BaseRequestHandler):
         data=self.request[0]
         socket=self.request[1]
         ser.write(drv.send(data))
+        #print(drv.send(data))
 
 server= socketserver.UDPServer(('',RECV_PORT),MessageHandler)
 server_thread=threading.Thread(target=server.serve_forever)
