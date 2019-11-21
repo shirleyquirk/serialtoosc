@@ -11,8 +11,8 @@ import socketserver
 from time import sleep
 import threading
 
-UDP_HOST="127.0.0.1"
-UDP_PORT=8888
+UDP_HOST="192.168.1.21"
+UDP_PORT=1234
 RECV_PORT=9999
 sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
@@ -35,7 +35,7 @@ server_thread.start()
 while True:
   sleep(1)
   #TODO: handle drv errors on improper packet
-  messages += drv.receive(ser.read(ser.inWaiting()))
+  messages = drv.receive(ser.read(ser.inWaiting()))
   for mess in messages:
     sock.sendto(mess,(UDP_HOST,UDP_PORT))
   
