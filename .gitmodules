@@ -1,3 +1,6 @@
 [submodule "SlipLib"]
 	path = SlipLib
 	url = git://github.com/rhjdjong/SlipLib
+[submodule "pyserial"]
+	path = pyserial
+	url = git://github.com/pyserial/pyserial
