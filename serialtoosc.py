@@ -6,7 +6,7 @@
 #TODO: OSCQuery everything
 
 from SlipLib.sliplib import Driver
-from pyserial import serial
+import serial
 import socket
 import socketserver
 #from pythonosc import udcp_client
