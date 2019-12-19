@@ -1,0 +1,6 @@
+
+osc in:
+   status indicator shows current state
+   ring is either on or off
+   e.g. /set_encoder/2 value=float
+   e.g. /encoder/1/off encoder/0/on
